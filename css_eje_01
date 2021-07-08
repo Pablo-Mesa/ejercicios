@@ -1,0 +1,34 @@
+
+.envoltorio{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    margin-top: 5%;
+    margin-left: 10%;
+    width: 30%;
+    background-color: wheat;
+    padding: 10px 40px;
+    border: 1px solid #ff6633;
+}
+
+textarea{
+    width: 390px;
+    height: 250px;
+}
+
+@media(max-width: 858px){
+    
+    main{
+        margin-top: 10%;
+        margin-left: 0%;
+        width: 90%;
+        padding: 20px 10px;
+    }
+    
+    textarea{
+        width: 100%;
+    }
+}
+
