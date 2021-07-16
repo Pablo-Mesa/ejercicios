@@ -12,7 +12,7 @@ function solucionar(){
     let textoDividido = texto.split(' ');                                   //separar palabras    
     let contador = 0;                                                       //variable almacena cantidad repeticiones de c/ palabra
     let resultados = [];                                                    //array que almacena los resultado "palabra" - "apariciones"
-    //let mem = 0, mem2 = 0, memr = 0;
+    
     for(let i = 0; i < textoDividido.length; i++){                          //recorrer palabra por palabra
         //mem++;
         for(let a = 0; a < textoDividido.length; a++){                      //recorrer texto
@@ -21,16 +21,16 @@ function solucionar(){
                 contador++;                                                 //incrementar el contador
             }                                                               //fin si encuentra coincidencia
         }                                                                   //fin recorrer texto 
-        if(!resultados.includes(textoDividido[i]+" - "+contador+"\n")){   //si palabra no fue contabilizada, entonces
-            resultados.push(textoDividido[i]+" - "+contador+"\n");        //agregar palabra+contador al array resultados
+        if(!resultados.includes(textoDividido[i]+" - "+contador+"\n")){     //si palabra no fue contabilizada, entonces
+            resultados.push(textoDividido[i]+" - "+contador+"\n");          //agregar palabra+contador al array resultados
         }                                                                   //fin si palabra no fue contabilizada
         contador = 0;                                                       //reinicializar contador
     }                                                                       //fin recorrer palabra por palabra    
     resultados.push("-------------------------\n");
     resultados.push("TOTAL PALABRAS     = "+textoDividido.length+"\nPALABRAS DISTINTAS = "+(resultados.length-1));
-    //alert("palabras total="+textoDividido.length+" / palabras distintas="+resultados.length);
+    
     document.getElementById('txtTexto').value = resultados.join("");        //mostrar resultados en el textarea
-    //alert("mem="+mem+"\n\ "+"mem2="+mem2+"\n\ "+"memr="+(mem+mem2));        //msg aux contador de iteraciones   
+                                                                            //msg aux contador de iteraciones   
 }
 //fin funcion contar cuantas palabras distintas hay en un texto dado y cuantas veces se repite
 
